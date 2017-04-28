@@ -14,6 +14,9 @@ public class VendingMachine {
         else if (value.equals(Coins.Dime)){
             coinValue = "0.10";
         }
+        else if (value.equals(Coins.Quarter)){
+            coinValue = "0.25";
+        }
 
         return coinValue;
     }

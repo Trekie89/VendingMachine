@@ -24,6 +24,12 @@ public class VendingMachineTDD {
         assertEquals("0.10", vendingMachine.coins(Coins.Dime));
     }
 
+    @Test
+    public void customerInsertsQuarter() {
+        VendingMachine vendingMachine = new VendingMachine();
+        assertEquals("0.25", vendingMachine.coins(Coins.Quarter));
+    }
+
 
 
 }
