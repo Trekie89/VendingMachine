@@ -17,6 +17,9 @@ public class VendingMachine {
         else if (value.equals(Coins.Quarter)){
             coinValue = "0.25";
         }
+        else if (value.equals(Coins.Penny)){
+            coinValue = "not valid coin";
+        }
 
         return coinValue;
     }

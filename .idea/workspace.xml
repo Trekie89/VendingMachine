@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a51b7999-1763-452c-b59b-045709de0058" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VendingMachine.java" afterPath="$PROJECT_DIR$/src/VendingMachine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VendingMachineTDD.java" afterPath="$PROJECT_DIR$/src/VendingMachineTDD.java" />
     </list>
@@ -23,8 +22,8 @@
       <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/VendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+            <state relative-caret-position="450">
+              <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -43,8 +42,8 @@
       <file leaf-file-name="VendingMachineTDD.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VendingMachineTDD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="29" column="66" lean-forward="true" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+            <state relative-caret-position="276">
+              <caret line="35" column="71" lean-forward="false" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -632,17 +631,11 @@
       <updated>1493333333063</updated>
       <workItem from="1493333336129" duration="2190000" />
       <workItem from="1493336591872" duration="52000" />
-      <workItem from="1493386169177" duration="2190000" />
+      <workItem from="1493386169177" duration="2525000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VendingMachineTDD - 2017.04.27 at 19h 07m 47s.xml">
-      <configuration name="VendingMachineTDD" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VendingMachineTDD - 2017.04.27 at 19h 24m 57s.xml">
-      <configuration name="VendingMachineTDD" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="VendingMachineTDD - 2017.04.28 at 09h 40m 12s.xml">
       <configuration name="VendingMachineTDD" configurationId="JUnit" />
     </history-entry>
@@ -667,9 +660,15 @@
     <history-entry file="VendingMachineTDD - 2017.04.28 at 10h 06m 03s.xml">
       <configuration name="VendingMachineTDD" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="VendingMachineTDD - 2017.04.28 at 10h 11m 16s.xml">
+      <configuration name="VendingMachineTDD" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VendingMachineTDD - 2017.04.28 at 10h 11m 36s.xml">
+      <configuration name="VendingMachineTDD" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4432000" />
+    <option name="totallyTimeSpent" value="4767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -767,8 +766,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VendingMachineTDD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="29" column="66" lean-forward="true" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+        <state relative-caret-position="276">
+          <caret line="35" column="71" lean-forward="false" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -777,8 +776,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VendingMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        <state relative-caret-position="450">
+          <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
           <folding />
         </state>
       </provider>

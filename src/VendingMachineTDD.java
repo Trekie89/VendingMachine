@@ -30,6 +30,12 @@ public class VendingMachineTDD {
         assertEquals("0.25", vendingMachine.coins(Coins.Quarter));
     }
 
+    @Test
+    public void customerInsertsPenny() {
+        VendingMachine vendingMachine = new VendingMachine();
+        assertEquals("not valid coin", vendingMachine.coins(Coins.Penny));
+    }
+
 
 
 }
