@@ -32,19 +32,24 @@ public class VendingMachineTDD {
     @Test
     public void customerInsertsACoin() {
         VendingMachine vendingMachine = new VendingMachine();
-        assertEquals("0.05", vendingMachine.coins(Coins.Nickle));
-        assertEquals("0.10", vendingMachine.coins(Coins.Dime));
-        assertEquals("0.25", vendingMachine.coins(Coins.Quarter));
-        assertEquals("not valid coin", vendingMachine.coins(Coins.Penny));
+        assertEquals("0.05", vendingMachine.coins("nickle"));
+        assertEquals("0.10", vendingMachine.coins("dime"));
+        assertEquals("0.25", vendingMachine.coins("quarter"));
+        assertEquals("0.01", vendingMachine.coins("penny"));
     }
 
     @Test
     public void customerPushesButtonForProduct() {
         VendingMachine vendingMachine = new VendingMachine();
-        assertEquals("Cola", vendingMachine.button(Buttons.Cola));
-        assertEquals("Chips", vendingMachine.button(Buttons.Chips));
-        assertEquals("Candy", vendingMachine.button(Buttons.Candy));
+        assertEquals("1.00", vendingMachine.product("cola"));
+        assertEquals("0.50", vendingMachine.product("chips"));
+        assertEquals("0.65", vendingMachine.product("candy"));
     }
+
+//    public void customerPutsInMultipleCoins() {
+//        VendingMachine vendingMachine = new VendingMachine();
+//
+//    }
 
 
 

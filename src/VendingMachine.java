@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class VendingMachine {
 
     public static String displayWelcome() {
@@ -16,48 +18,74 @@ public class VendingMachine {
         return "Exact Change Only";
     }
 
-    public String coins(Coins value) {
+
+    public String coins(String coin) {
 
         String coinValue = "";
 
-        if (value.equals(Coins.Nickle)) {
-            coinValue = "0.05";
+        if (coin.equalsIgnoreCase("nickle") ) {
+             coinValue = Coins2.getNickle();
         }
-        else if (value.equals(Coins.Dime)){
-            coinValue = "0.10";
+        else if (coin.equalsIgnoreCase("dime")) {
+            coinValue = Coins2.getDime();
         }
-        else if (value.equals(Coins.Quarter)){
-            coinValue = "0.25";
+        else if (coin.equalsIgnoreCase("quarter")){
+            coinValue = Coins2.getQuarter();
         }
-        else if (value.equals(Coins.Penny)){
-            coinValue = "not valid coin";
+        else if (coin.equalsIgnoreCase("penny")){
+            coinValue = Coins2.getPenny();
         }
 
         return coinValue;
     }
 
-    public String button(Buttons value) {
+    public static String product(String value) {
 
         String product = "";
 
-        if (value.equals(Buttons.Cola)){
-            product = "Cola";
+        if (value.equalsIgnoreCase("cola")){
+            product = "1.00";
         }
-        else if (value.equals(Buttons.Chips)){
-            product = "Chips";
+        else if (value.equalsIgnoreCase("chips")){
+            product = "0.50";
         }
-        else if (value.equals(Buttons.Candy)){
-            product = "Candy";
+        else if (value.equalsIgnoreCase("candy")){
+            product = "0.65";
         }
 
         return product;
     }
 
-    public static void main(String[] args) {
+    public Double addCoins(String coinValue) {
 
-        displayWelcome();
+        Double totalCoins = 0.0;
 
+        totalCoins += Double.parseDouble(coinValue);
+
+        return totalCoins;
     }
 
+    public static void main(String[] args) {
 
+        Scanner scan = new Scanner(System.in);
+        String userChoice = "";
+
+
+//        System.out.println(displayWelcome());
+
+        System.out.println("What would you like? Cola, Chips, or Candy?");
+
+        userChoice = scan.nextLine();
+
+        System.out.println("The price is: " + product(userChoice));
+
+        System.out.println(displayWelcome());
+
+
+
+
+
+
+
+    }
 }
