@@ -8,6 +8,10 @@ public class VendingMachine {
         return "Thank You";
     }
 
+    public static String displaySoldOut() {
+        return "Sold Out";
+    }
+
     public String coins(Coins value) {
 
         String coinValue = "";

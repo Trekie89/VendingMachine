@@ -18,6 +18,12 @@ public class VendingMachineTDD {
     }
 
     @Test
+    public void saysSoldOut() {
+        VendingMachine vendingMachine = new VendingMachine();
+        assertEquals("Sold Out", vendingMachine.displaySoldOut());
+    }
+
+    @Test
     public void customerInsertsACoin() {
         VendingMachine vendingMachine = new VendingMachine();
         assertEquals("0.05", vendingMachine.coins(Coins.Nickle));
