@@ -1,7 +1,11 @@
 public class VendingMachine {
 
-    public static String display() {
+    public static String displayWelcome() {
         return "Insert Coins";
+    }
+
+    public static String displayThankYou() {
+        return "Thank You";
     }
 
     public String coins(Coins value) {
@@ -25,7 +29,9 @@ public class VendingMachine {
     }
 
     public static void main(String[] args) {
-	// write your code here
+
+        displayWelcome();
+
     }
 
 

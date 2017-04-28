@@ -9,7 +9,13 @@ public class VendingMachineTDD {
     @Test
     public void saysInsertCoins() {
         VendingMachine vendingMachine = new VendingMachine();
-        assertEquals("Insert Coins", vendingMachine.display());
+        assertEquals("Insert Coins", vendingMachine.displayWelcome());
+    }
+
+    @Test
+    public void saysThankYou() {
+        VendingMachine vendingMachine = new VendingMachine();
+        assertEquals("Thank You", vendingMachine.displayThankYou());
     }
 
     @Test
