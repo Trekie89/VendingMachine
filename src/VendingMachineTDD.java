@@ -1,7 +1,6 @@
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 
 
 public class VendingMachineTDD {
@@ -40,6 +39,24 @@ public class VendingMachineTDD {
     public void customerInsertsPenny() {
         VendingMachine vendingMachine = new VendingMachine();
         assertEquals("not valid coin", vendingMachine.coins(Coins.Penny));
+    }
+
+    @Test
+    public void customerPushesButtonForCola() {
+        VendingMachine vendingMachine = new VendingMachine();
+        assertEquals("Cola", vendingMachine.button(Buttons.Cola));
+    }
+
+    @Test
+    public void customerPushesButtonForChips() {
+        VendingMachine vendingMachine = new VendingMachine();
+        assertEquals("Chips", vendingMachine.button(Buttons.Chips));
+    }
+
+    @Test
+    public void customerPushesButtonForCandy() {
+        VendingMachine vendingMachine = new VendingMachine();
+        assertEquals("Candy", vendingMachine.button(Buttons.Candy));
     }
 
 

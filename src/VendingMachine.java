@@ -28,6 +28,23 @@ public class VendingMachine {
         return coinValue;
     }
 
+    public String button(Buttons value) {
+
+        String product = "";
+
+        if (value.equals(Buttons.Cola)){
+            product = "Cola";
+        }
+        else if (value.equals(Buttons.Chips)){
+            product = "Chips";
+        }
+        else if (value.equals(Buttons.Candy)){
+            product = "Candy";
+        }
+
+        return product;
+    }
+
     public static void main(String[] args) {
 
         displayWelcome();
