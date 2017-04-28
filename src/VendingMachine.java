@@ -8,8 +8,12 @@ public class VendingMachine {
 
         String coinValue = "";
 
-        if (value.equals(Coins.Nickle))
+        if (value.equals(Coins.Nickle)) {
             coinValue = "0.05";
+        }
+        else if (value.equals(Coins.Dime)){
+            coinValue = "0.10";
+        }
 
         return coinValue;
     }

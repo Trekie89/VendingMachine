@@ -18,6 +18,12 @@ public class VendingMachineTDD {
         assertEquals("0.05", vendingMachine.coins(Coins.Nickle));
     }
 
+    @Test
+    public void customerInsertsDime() {
+        VendingMachine vendingMachine = new VendingMachine();
+        assertEquals("0.10", vendingMachine.coins(Coins.Dime));
+    }
+
 
 
 }
