@@ -24,6 +24,12 @@ public class VendingMachineTDD {
     }
 
     @Test
+    public void saysExactChangeOnly() {
+        VendingMachine vendingMachine = new VendingMachine();
+        assertEquals("Exact Change Only", vendingMachine.displayExactChangeOnly());
+    }
+
+    @Test
     public void customerInsertsACoin() {
         VendingMachine vendingMachine = new VendingMachine();
         assertEquals("0.05", vendingMachine.coins(Coins.Nickle));

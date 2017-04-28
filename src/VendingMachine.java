@@ -12,6 +12,10 @@ public class VendingMachine {
         return "Sold Out";
     }
 
+    public static String displayExactChangeOnly() {
+        return "Exact Change Only";
+    }
+
     public String coins(Coins value) {
 
         String coinValue = "";
