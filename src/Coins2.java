@@ -8,6 +8,9 @@ public class Coins2 {
     private final static String Quarter = "0.25";
     private final static String Penny = "0.01";
 
+    public Coins2() {
+    }
+
     public static String getNickle() {
         return Nickle;
     }

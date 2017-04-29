@@ -2,9 +2,7 @@ import java.util.Scanner;
 
 public class VendingMachine {
 
-    public static String displayWelcome() {
-        return "Insert Coins";
-    }
+    public static String displayWelcome() { return "Insert Coins"; }
 
     public static String displayThankYou() {
         return "Thank You";
@@ -19,7 +17,7 @@ public class VendingMachine {
     }
 
 
-    public String coins(String coin) {
+    public static String coins(String coin) {
 
         String coinValue = "";
 
@@ -56,36 +54,59 @@ public class VendingMachine {
         return product;
     }
 
-    public Double addCoins(String coinValue) {
+    public static Double makeCoinsNumerical(String coinValue) {
 
         Double totalCoins = 0.0;
 
-        totalCoins += Double.parseDouble(coinValue);
+        totalCoins = Double.parseDouble(coinValue);
 
         return totalCoins;
+    }
+
+    public static void printProduct(String userChoiceProduct) {
+        if (userChoiceProduct.equalsIgnoreCase("cola")) { System.out.println(Product.getCola()); }
+        else if (userChoiceProduct.equalsIgnoreCase("chips")) { System.out.println(Product.getChips()); }
+        else if (userChoiceProduct.equalsIgnoreCase("candy")) { System.out.println(Product.getCandy()); }
+    }
+
+    public static Double addCoins(String userChoiceCoin, Double totalAmount) {
+        totalAmount += makeCoinsNumerical(coins(userChoiceCoin));
+        return totalAmount;
     }
 
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        String userChoice = "";
-
-
-//        System.out.println(displayWelcome());
+        String userChoiceProduct = "";
+        String userChoiceCoin = "";
+        Double userAmountOwed = 0.0;
+        Double totalAmount = 0.0;
 
         System.out.println("What would you like? Cola, Chips, or Candy?");
 
-        userChoice = scan.nextLine();
+        userChoiceProduct = scan.nextLine();
 
-        System.out.println("The price is: " + product(userChoice));
+        userAmountOwed = Double.parseDouble(product(userChoiceProduct));
 
-        System.out.println(displayWelcome());
+        System.out.println("The price is: " + product(userChoiceProduct));
 
+        System.out.println(displayWelcome() + " Nickle, Dime, or Quarter. No Pennies Please.");
 
+        do {
 
+            userChoiceCoin = scan.nextLine();
+            totalAmount = addCoins(userChoiceCoin, totalAmount);
+            System.out.println(displayWelcome() + " Total: " + totalAmount);
 
+        }while (totalAmount < userAmountOwed);
 
+        printProduct(userChoiceProduct);
 
+        System.out.println();
+        System.out.println(displayThankYou());
 
     }
+
+
+
 }

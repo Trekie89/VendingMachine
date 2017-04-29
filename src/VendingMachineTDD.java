@@ -48,11 +48,23 @@ public class VendingMachineTDD {
 
 //    public void customerPutsInMultipleCoins() {
 //        VendingMachine vendingMachine = new VendingMachine();
-//
+//        assertEquals(0.50, vendingMachine.addCoins());
 //    }
 
-
-
-
+//    @Test
+//    public void customerGetsCorrectProduct() {
+//        VendingMachine vendingMachine = new VendingMachine();
+//        assertEquals("           .=.\n" +
+//                "           } {\n" +
+//                "          .' '.\n" +
+//                "         /     \\\n" +
+//                "         ;'---';\n" +
+//                "         |PEPSI|\n" +
+//                "         | .-. |\n" +
+//                "         | '-' |\n" +
+//                "         |'---'|\n" +
+//                "         '._._.'", vendingMachine.printProduct());
+//
+//    }
 
 }
