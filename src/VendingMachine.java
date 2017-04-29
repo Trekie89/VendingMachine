@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class VendingMachine {
@@ -16,24 +17,22 @@ public class VendingMachine {
         return "Exact Change Only";
     }
 
-
     public static String coins(String coin) {
 
         String coinValue = "";
 
         if (coin.equalsIgnoreCase("nickle") ) {
-             coinValue = Coins2.getNickle();
+             coinValue = Coins.getNickle();
         }
         else if (coin.equalsIgnoreCase("dime")) {
-            coinValue = Coins2.getDime();
+            coinValue = Coins.getDime();
         }
         else if (coin.equalsIgnoreCase("quarter")){
-            coinValue = Coins2.getQuarter();
+            coinValue = Coins.getQuarter();
         }
         else if (coin.equalsIgnoreCase("penny")){
-            coinValue = Coins2.getPenny();
+            coinValue = Coins.getPenny();
         }
-
         return coinValue;
     }
 
@@ -50,16 +49,13 @@ public class VendingMachine {
         else if (value.equalsIgnoreCase("candy")){
             product = "0.65";
         }
-
         return product;
     }
 
     public static Double makeCoinsNumerical(String coinValue) {
 
         Double totalCoins = 0.0;
-
         totalCoins = Double.parseDouble(coinValue);
-
         return totalCoins;
     }
 
@@ -74,6 +70,13 @@ public class VendingMachine {
         return totalAmount;
     }
 
+    public static String getChangeForUser(Double userAmountOwed, Double totalAmount, String changeToUser, DecimalFormat decimalFormat) {
+        if (totalAmount > userAmountOwed) {
+            changeToUser = decimalFormat.format((totalAmount - userAmountOwed));
+        }
+        return changeToUser;
+    }
+
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
@@ -81,6 +84,9 @@ public class VendingMachine {
         String userChoiceCoin = "";
         Double userAmountOwed = 0.0;
         Double totalAmount = 0.0;
+        String changeToUser = "";
+        DecimalFormat decimalFormat = new DecimalFormat("0.00");
+
 
         System.out.println("What would you like? Cola, Chips, or Candy?");
 
@@ -93,20 +99,20 @@ public class VendingMachine {
         System.out.println(displayWelcome() + " Nickle, Dime, or Quarter. No Pennies Please.");
 
         do {
-
             userChoiceCoin = scan.nextLine();
             totalAmount = addCoins(userChoiceCoin, totalAmount);
-            System.out.println(displayWelcome() + " Total: " + totalAmount);
+            System.out.println(displayWelcome() + " \nTotal so far: " + decimalFormat.format(totalAmount));
 
         }while (totalAmount < userAmountOwed);
 
+        changeToUser = getChangeForUser(userAmountOwed, totalAmount, changeToUser, decimalFormat);
+
         printProduct(userChoiceProduct);
+        System.out.println();
+        System.out.println("Your change: $" + changeToUser);
 
         System.out.println();
         System.out.println(displayThankYou());
 
     }
-
-
-
 }

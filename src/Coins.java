@@ -1,14 +1,14 @@
 /**
  * Created by Samantha on 4/28/2017.
  */
-public class Coins2 {
+public class Coins {
 
     private final static String Nickle = "0.05";
     private final static String Dime = "0.10";
     private final static String Quarter = "0.25";
     private final static String Penny = "0.01";
 
-    public Coins2() {
+    public Coins() {
     }
 
     public static String getNickle() {
